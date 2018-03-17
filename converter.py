@@ -49,7 +49,7 @@ def set_dir(args):
 def set_output_dir(args):
     if args.rdirout:
         args.dirout = os.path.join(os.getcwd() + args.rdirout)
-    elif not args.dirout:
+    if not args.dirout:
         args.dirout = os.path.join(os.getcwd() + '/png/')
     if not os.path.exists(args.dirout):
         os.makedirs(args.dirout)
