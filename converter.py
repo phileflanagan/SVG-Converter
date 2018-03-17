@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import subprocess
 import os
 import tempfile
 
@@ -27,7 +26,6 @@ def check_for_svgs(args):
             pass
         else:
             raise FileNotFoundError('File is not an SVG')
-
     elif any(File.endswith(".svg") for File in os.listdir(args.dir)):
         pass
     else:
